@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} 404 {% endblock title %} - CRUD</title>
+    <link rel="stylesheet" href="{% static 'enroll/static/css/style.css' %}" />
+  </head>
+  <body>
+    <div class="py-16">
+      <h2 class="text-blue-500 capitalize text-2xl font-semibold text-center">
+        function Based View ModelForm Crud Project
+      </h2>
+      <div class="p-16">{% block content %} {% endblock content %}</div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

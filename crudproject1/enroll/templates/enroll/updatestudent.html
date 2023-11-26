@@ -1,0 +1,20 @@
+{% extends 'enroll/base.html' %} 
+{% block title %}
+    Update
+{% endblock title %}
+{% block content %}
+<div class="grid grid-cols-2">
+  <div>
+    <h4 class="text-2xl">Update Student Information</h4>
+    <form action="" method="POST">
+      {% csrf_token %} {{form.as_p}}
+      <input
+        type="submit"
+        class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+        value="Update"
+      />
+    </form>
+    <a href="{% url 'addandshow' %}" class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 underline decoration-blue-700">Back to home</a>
+  </div>
+</div>
+{% endblock content %}
